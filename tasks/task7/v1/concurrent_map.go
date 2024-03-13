@@ -30,10 +30,10 @@ func main() {
 	for i := 0; i < 10; i++ {
 		wg.Add(1) // увеличиваем счетчик на 1
 		// запуск горутины
-		go func(n MuMap, val int) {
+		go func(n *MuMap, val int) {
 			n.add(val, val)
 			wg.Done() // уменьшаем счетчик на 1
-		}(nums, i)
+		}(&nums, i)
 	}
 
 	// Дожидаемся завершения всех горутин
