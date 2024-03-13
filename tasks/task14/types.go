@@ -13,7 +13,7 @@ func main() {
 }
 
 func isType(value interface{}) {
-	// используя switch и слова type, определяем тип value
+	// используя switch и type, определяем тип value
 	switch v := value.(type) {
 	// далее перебираем каждый случай
 	case int:
